@@ -1,6 +1,7 @@
 import os
+from os import environ
 import telebot
-API_KEY = os.environ['API_KEY']
+API_KEY = environ['API_KEY']
 bot = telebot.TeleBot(API_KEY)
 @bot.message_handler(commands=['greet'])
 def greet(message):
